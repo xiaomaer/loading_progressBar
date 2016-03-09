@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="2016-2-12,progress bar" />
+		<title>CSS3发光进度条动画 </title>
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<style>
+			.percent {
+				background: white;
+				/*进度条发光*/
+				box-shadow: 0px 0px 10px 1px #FD4275, 0 0 1px #FD4275, 0 0 1px #FD4275, 0 0 1px #FD4275, 0 0 1px #FD4275, 0 0 1px #FD4275, 0 0 1px #FD4275;
+				/*进度条百分比改变时的动画效果*/
+				transition-property: width;
+				transition-duration: 1s;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="progress">
+			<span id="default" class="percent"></span>
+			<span class="count"></span>
+		</div>
+		<div class="progress">
+			<span id="time" class="percent"></span>
+			<span class="count"></span>
+		</div>
+		<div class="progress">
+			<span id="color" class="percent"></span>
+			<span class="count"></span>
+		</div>
+		<div class="progress">
+			<span id="height" class="percent"></span>
+			<span class="count"></span>
+		</div>
+		<script src="js/pb_boxshadow.js">
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,71 @@
+body {
+	background: #808080;
+}
+
+.progress {
+	position: relative;
+	margin: 50px auto;
+	width: 60px;
+	height: 500px;
+	background: #444444;
+	border-radius: 6px;
+}
+
+#bar {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 60px;
+	height: 0%;
+	text-align: center;
+	border-radius: 6px;
+	background-color: #FD4275;
+	transition: height 1s linear;
+}
+
+#triangle {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -20px;
+	border-bottom: 20px solid rgba(255, 255, 255, 0.25);
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	animation: trianglePosition 0.5s linear infinite;
+}
+
+@-moz-keyframes trianglePosition {
+	from {
+		bottom: 10px;
+	}
+	to {
+		bottom: 490px;
+	}
+}
+
+@-webkit-keyframes trianglePosition {
+	from {
+		bottom: 10px;
+	}
+	to {
+		bottom: 490px;
+	}
+}
+
+@-ms-keyframes trianglePosition {
+	from {
+		bottom: 10px;
+	}
+	to {
+		bottom: 490px;
+	}
+}
+
+@keyframes trianglePosition {
+	from {
+		bottom: 10px;
+	}
+	to {
+		bottom: 490px;
+	}
+}

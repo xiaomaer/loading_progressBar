@@ -1,0 +1,87 @@
+.progress,
+.percent {
+	height: 20px;
+}
+
+/*改动画用于改变渐变背景的位置，从而形成往返移动的效果*/
+
+@keyframes changeColor {
+	0% {
+		background-position: -50% center, right center, left center;
+	}
+	100% {
+		background-position: 150% center, right center, left center;
+	}
+}
+.percent {
+	background-size: 100px 30px, 130px 30px, 130px 30px;
+	background-repeat: no-repeat;
+	background-position: -20% center, right center, left center;
+	background-color: rgba(201, 4, 20, 0.95);
+	background-image: -webkit-linear-gradient(0deg, rgba(226, 4, 22, 0) 10%, rgba(250, 6, 26, 0.8) 30%, #fb1f31 70%, rgba(250, 6, 26, 0.8) 80%, rgba(226, 4, 22, 0) 90%), -webkit-linear-gradient(left, rgba(251, 31, 49, 0) 0%, #fb1f31 100%), -webkit-linear-gradient(right, rgba(251, 31, 49, 0) 0%, #fb1f31 100%);
+	background-image: linear-gradient(90deg, rgba(226, 4, 22, 0) 10%, rgba(250, 6, 26, 0.8) 30%, #fb1f31 70%, rgba(250, 6, 26, 0.8) 80%, rgba(226, 4, 22, 0) 90%), linear-gradient(to right, rgba(251, 31, 49, 0) 0%, #fb1f31 100%), linear-gradient(to left, rgba(251, 31, 49, 0) 0%, #fb1f31 100%);
+	/*对于变化的属性，形成过渡动画*/
+	transition: width 0.8s ease-out, background-color 1s ease;
+	animation: changeColor 2s ease-out infinite;
+}
+
+
+/*根据百分比不断改变渐变背景*/
+
+
+/*25%*/
+
+.bg-orange {
+	background-color: rgba(201, 47, 0, 0.95);
+	background-image: -webkit-linear-gradient(0deg, rgba(227, 53, 0, 0) 10%, rgba(252, 59, 0, 0.8) 30%, #ff4d17 70%, rgba(252, 59, 0, 0.8) 80%, rgba(227, 53, 0, 0) 90%), -webkit-linear-gradient(left, rgba(255, 77, 23, 0) 0%, #ff4d17 100%), -webkit-linear-gradient(right, rgba(255, 77, 23, 0) 0%, #ff4d17 100%);
+	background-image: linear-gradient(90deg, rgba(227, 53, 0, 0) 10%, rgba(252, 59, 0, 0.8) 30%, #ff4d17 70%, rgba(252, 59, 0, 0.8) 80%, rgba(227, 53, 0, 0) 90%), linear-gradient(to right, rgba(255, 77, 23, 0) 0%, #ff4d17 100%), linear-gradient(to left, rgba(255, 77, 23, 0) 0%, #ff4d17 100%);
+}
+
+
+/*50%*/
+
+.bg-yellow {
+	background-color: rgba(232, 158, 0, 0.95);
+	background-image: -webkit-linear-gradient(0deg, rgba(255, 174, 2, 0) 10%, rgba(255, 183, 28, 0.8) 30%, #ffbf36 70%, rgba(255, 183, 28, 0.8) 80%, rgba(255, 174, 2, 0) 90%), -webkit-linear-gradient(left, rgba(255, 191, 54, 0) 0%, #ffbf36 100%), -webkit-linear-gradient(right, rgba(255, 191, 54, 0) 0%, #ffbf36 100%);
+	background-image: linear-gradient(90deg, rgba(255, 174, 2, 0) 10%, rgba(255, 183, 28, 0.8) 30%, #ffbf36 70%, rgba(255, 183, 28, 0.8) 80%, rgba(255, 174, 2, 0) 90%), linear-gradient(to right, rgba(255, 191, 54, 0) 0%, #ffbf36 100%), linear-gradient(to left, rgba(255, 191, 54, 0) 0%, #ffbf36 100%);
+}
+
+
+/*75%*/
+
+.bg-green {
+	background-color: rgba(0, 178, 23, 0.95);
+	background-image: -webkit-linear-gradient(0deg, rgba(0, 203, 26, 0) 10%, rgba(0, 229, 30, 0.8) 30%, #00fe21 70%, rgba(0, 229, 30, 0.8) 80%, rgba(0, 203, 26, 0) 90%), -webkit-linear-gradient(left, rgba(0, 254, 33, 0) 0%, #00fe21 100%), -webkit-linear-gradient(right, rgba(0, 254, 33, 0) 0%, #00fe21 100%);
+	background-image: linear-gradient(90deg, rgba(0, 203, 26, 0) 10%, rgba(0, 229, 30, 0.8) 30%, #00fe21 70%, rgba(0, 229, 30, 0.8) 80%, rgba(0, 203, 26, 0) 90%), linear-gradient(to right, rgba(0, 254, 33, 0) 0%, #00fe21 100%), linear-gradient(to left, rgba(0, 254, 33, 0) 0%, #00fe21 100%);
+}
+
+
+/*100%*/
+
+.bg-blue {
+	background-color: rgba(18, 135, 204, 0.95);
+	background-image: -webkit-linear-gradient(0deg, rgba(20, 151, 227, 0) 10%, rgba(37, 162, 236, 0.8) 30%, #3dacee 70%, rgba(37, 162, 236, 0.8) 80%, rgba(20, 151, 227, 0) 90%), -webkit-linear-gradient(left, rgba(61, 172, 238, 0) 0%, #3dacee 100%), -webkit-linear-gradient(right, rgba(61, 172, 238, 0) 0%, #3dacee 100%);
+	background-image: linear-gradient(90deg, rgba(20, 151, 227, 0) 10%, rgba(37, 162, 236, 0.8) 30%, #3dacee 70%, rgba(37, 162, 236, 0.8) 80%, rgba(20, 151, 227, 0) 90%), linear-gradient(to right, rgba(61, 172, 238, 0) 0%, #3dacee 100%), linear-gradient(to left, rgba(61, 172, 238, 0) 0%, #3dacee 100%);
+}
+
+
+/*当达到100%时，关闭动画*/
+
+.animate-finish {
+	animation: none;
+}
+
+
+/*跟着进度条前进的右侧的渐变线*/
+
+
+/*.percent:after {
+				content: "";
+				position: absolute;
+				right: -2px;
+				top: -10px;
+				width: 4px;
+				height: 40px;
+				background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 75%);
+				background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 75%);
+}*/

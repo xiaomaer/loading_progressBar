@@ -1,0 +1,24 @@
+.progress {
+	position: relative;
+	margin: 50px auto;
+	width: 600px;
+	height: 6px;
+	background: gray;
+	border-radius: 5px;
+}
+
+.percent {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 6px;
+	border-radius: 2px;
+}
+
+.count {
+	position: absolute;
+	right: -40px;
+	color: white;
+}
